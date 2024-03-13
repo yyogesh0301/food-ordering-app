@@ -13,7 +13,7 @@ const EditItemQuantityComponent = (props) => {
     <div className='meal-info-container'>
       <div className='meal-container'>
           <label className='label-meal-info'>Meal:</label>
-          {/* mora ovako sa ? inace puca cim se zatvori modal, jer se vrv setuje item na null a onda renderuje u modalu ponovo, ili bih mogao da proverim da li je itemFromCart != null   */}
+          {}
           <label className='label-meal-value'>{itemFromCart?.mealName}</label>
       </div>
 

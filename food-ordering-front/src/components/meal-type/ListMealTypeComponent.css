@@ -2,7 +2,7 @@
     
     height: 110px;
     width: 90%;
-    object-fit: cover; /* da ne razvuce sliku */
+    object-fit: cover; 
      border: 2px rgb(173, 135, 135) solid ; 
     border-radius: 5px;
     /*align-items: center;

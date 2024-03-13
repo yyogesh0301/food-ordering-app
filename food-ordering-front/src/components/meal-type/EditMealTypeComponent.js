@@ -3,10 +3,9 @@ import { Form } from "react-bootstrap";
 import MealTypeService from "../../services/MealService";
 
 const EditMealTypeComponent = (props) => {
-  const mealType = props.mealType; // u props se nalazi i user i metoda handle submit
+  const mealType = props.mealType; 
   const selectedFile = props.file;
-  // const {user} = props !!!!
-  // className = 'form-control', bootstrapov input forme, da lepse izgleda
+  
 
   const onChoseFile = (e) => {
     console.log(e.target.files[0]);

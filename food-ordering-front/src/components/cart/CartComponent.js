@@ -163,10 +163,10 @@ const CartComponent = () => {
       const sendFinalOrderAndHandleRepsonseFromServer = (finalOrderDetails) =>{
         MealService.sendItemsForFinalOrder(finalOrderDetails).then((response) =>{
           const responseFromServer = response.data;
-          //ako je response razlicit od 0, znaci da je uspesno upisan final order i prosledjen id, po defaultu je 0
+        
           if(responseFromServer != 0){
               dispatch(deleteAllItems());
-              // bude undefined u stvari, null == undefined ce biti true, null === undefined je false. mogu i proveriti samo sa == null
+             
               if(localStorage.token === null || localStorage.token === undefined){
                 handleCloseInsertDetails();
                 alertFinalOrderStringCheckInfo(responseFromServer);

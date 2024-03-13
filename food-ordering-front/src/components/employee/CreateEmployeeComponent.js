@@ -13,12 +13,12 @@ const CreateEmployeeComponent = () => {
   const [password, setPassword] = useState('')
   const [address, setAddress] = useState('')
 
-  //za update
+
   const {id} = useParams();
 
   const navigate = useNavigate();
 
-  //ako postoji id, znaci da se radi izmena i prvo se setuju podaci dobijeni od servera
+ 
   useEffect(() => {
     id && UserService.getEmployeeById(id).then((response) =>{
       setFirstName(response.data.firstName);
@@ -50,7 +50,7 @@ const CreateEmployeeComponent = () => {
       alertInvalid("Invalid phone number or it has less than 5 digits");
     }
     else{
-      //ako id postoji, odnosno ako je prosledjen radi se izmena postojeceg
+  
       if(id){
         UserService.updateEmployee(id, user).then((response) =>{
           if(response.data.toString() === "success"){
@@ -73,7 +73,7 @@ const CreateEmployeeComponent = () => {
           console.log(error);
         })
       }
-      //ako nije prosledjen id, radi se kreiranje novog
+      
       else{
         UserService.createEmployee(user).then((response) =>{
           console.log(response.data);
@@ -102,10 +102,7 @@ const CreateEmployeeComponent = () => {
 
   const isValidNumber = (input) => {
     // ^\d{5,}$: Uses a regular expression to ensure that the input consists of at least 5 digits. 
-    // Here's a breakdown:
-    // ^: Asserts the start of the string.
-    // \d{5,}: Matches at least 5 digits (\d is a shorthand for a digit, and {5,} means at least 5 occurrences).
-    // $: Asserts the end of the string.
+    
     if(isNaN(input) || /^\d{5,}$/.test(input) === false){
       return false;
     }
@@ -115,7 +112,6 @@ const CreateEmployeeComponent = () => {
   }
 
   const validateEmail = () => {
-    //treba bez ''
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
@@ -146,7 +142,7 @@ const title = () => {
     return <h2 className='text-center'>Create employee</h2>
   }
 }
-//ako postoji id, odnosno ako je izmena, disabluje se input
+
 const usernameInput = () => {
   if(id){
     return <input  

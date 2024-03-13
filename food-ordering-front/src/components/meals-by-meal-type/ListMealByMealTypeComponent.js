@@ -45,15 +45,11 @@ const ListMealByMealTypeComponent = () => {
   }, []);
 
   const handleShowMealQuantity = (meal) => {
-    //mora ovako da se setuje, kada se vrsi izmena, nakon toga zapamti id od starog pa radi izmenu
+   
     setId(meal.id);
     setName(meal.name);
     setPrice(meal.price);
-    // treba setMealType(meal.mealType) umesto setMealType(meal.mealType.typeName); ukoliko hocu da citam i mealType
-    // u tabeli na front-u, jer posle kada se salje na server-u, ne moze da parsira typeName sto dobije, pa bude bad request
-    // ili da menjam logiku na back-u za model, mada onda bi se sve zapetljalo
-    // bolje resenje bi bilo da ne saljem objekte vec varijable, jer se posle ulancaju objekti
-    // i dosta nepotrebnih podataka se salje
+   
     setMealType(meal.mealType);
     // setMealType(meal.mealType.typeName);
     setImage(meal.image);

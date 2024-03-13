@@ -45,9 +45,7 @@
         background-color: whitesmoke; 
     
         border-radius: 30px !important;
-        /* border: 3px solid gray !important; */ /*ZASTO OVO MORA DA SE ZAKOMENTARISE DA NE BI BIO CRNI BORDER NA TABELI, PREKO INSPECTA SAM SKONTAO KAD ISKLJUCIM OVO ONDA LEPO RADI TEK KAO ZA MEAL TYPE A TAMO IMA OVO UKLJUCENO ?????? CAK NA SVIM DOBRO RADI A SAMO JE OVDE ISKLJUCENO TO 
-        border-collapse: separate !important; /*mora ovo separate zbog bootstrapa, ne savije border, jer bootstrap setuje na collapse
-        /* border: 10px solid rgb(241, 0, 0) !important da pregazi bootstrapov border */
+       
         box-shadow: 0 0 15px 15px rgb(133, 127, 127);
         /* box-shadow: 0 0 20px 0 rgb(0,0, 0, 0.6); */
     }

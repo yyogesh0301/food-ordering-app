@@ -4,10 +4,9 @@ import { Form } from "react-bootstrap";
 import styles from "./ListMealComponent.css";
 
 const CreateMealComponent = (props) => {
-  const meal = props.meal; // u props se nalazi i user i metoda handle submit
+  const meal = props.meal; 
   const selectedFile = props.file;
-  // const {user} = props !!!!
-  // className = 'form-control', bootstrapov input forme, da lepse izgleda
+  
   const [mealTypes, setMealTypes] = useState([]);
 
   useEffect(() => {

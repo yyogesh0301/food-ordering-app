@@ -14,26 +14,22 @@ import org.springframework.stereotype.Service;
 import com.example.foodorderback.model.User;
 import com.example.foodorderback.repository.UserRepository;
 
-
-
-
 @Service
 public class CustomUserDetailService implements UserDetailsService {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		
+
 		User user = userRepository.findByUsername(username);
-		
+
 		List<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
 		grantedAuthorities.add(new SimpleGrantedAuthority(user.getRole().toString()));
-		
-		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
+
+		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
+				grantedAuthorities);
 	}
-	
-	
 
 }

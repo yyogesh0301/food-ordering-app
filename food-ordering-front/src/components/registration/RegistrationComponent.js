@@ -79,10 +79,7 @@ const RegistrationComponent = () => {
 
   const isValidNumber = (input) => {
     // ^\d{5,}$: Uses a regular expression to ensure that the input consists of at least 5 digits. 
-    // Here's a breakdown:
-    // ^: Asserts the start of the string.
-    // \d{5,}: Matches at least 5 digits (\d is a shorthand for a digit, and {5,} means at least 5 occurrences).
-    // $: Asserts the end of the string.
+    
     if(isNaN(input) || /^\d{5,}$/.test(input) === false){
       return false;
     }

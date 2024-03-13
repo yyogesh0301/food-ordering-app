@@ -18,8 +18,7 @@ const ListMealComponent = () => {
   const [image, setImage] = useState("");
   const [imageName, setImageName] = useState("");
 
-  // ovo treba na bolji nacin, a ne ovako, mada ako se ne brise iz baze ovaj meal type, radice okej
-  // const [mealType, setMealType] = useState({id: 1, typeName: 'PIZZA'});
+
   const [mealType, setMealType] = useState(undefined);
 
   const [description, setDescription] = useState("");
@@ -68,7 +67,7 @@ const ListMealComponent = () => {
     meal.setPrice("");
     meal.setDescription("");
     meal.setMealType(meals[0].mealType);
-    // meal.setMealType({id: 1, typeName: 'PIZZA'});
+    
   };
 
   const handleCloseEdit = () => {
@@ -82,7 +81,7 @@ const ListMealComponent = () => {
   };
   const handleShow = () => {
     setShow(true);
-    setId(null); //mora ovako da se setuje, kada se vrsi izmena, nakon toga zapamti id od starog pa radi izmenu
+    setId(null); 
   };
 
   const handleShowEdit = (meal) => {
@@ -130,7 +129,7 @@ const ListMealComponent = () => {
         fd.append("meal", JSON.stringify(meal));
         console.log("Selected fileeee" + selectedFile);
       } else {
-        //mora img da ima, jer nece na back-u da se nastavi zahtev je ne sadrzi sliku. Morao bih verovatno drugi api endpoint da gadjam kad nema sliku
+       
         fd.append("image", selectedFile);
         fd.append("meal", JSON.stringify(meal));
       }
@@ -199,7 +198,7 @@ const ListMealComponent = () => {
               <th className="theadth">Action</th>
             </tr>
           </thead>
-          {/*mora src={"data:image/png;base64," + meal.image}, ne moze samo src={meal.image}  */}
+          
           <tbody>
             {meals.map((meal) => (
               <tr key={meal.id}>

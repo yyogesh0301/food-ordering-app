@@ -12,10 +12,8 @@ axios.interceptors.request.use(function (config) {
     } else {
         axios.defaults.headers.common['Authorization'] = null;
         // delete axios.defaults.headers.common['Authorization'];
-        console.log("NEMA TOKENA!");
-        /*if setting null does not remove `Authorization` header then try     
-          delete axios.defaults.headers.common['Authorization'];
-        */
+        console.log("NO TOKEN!");
+        
     }
     
 

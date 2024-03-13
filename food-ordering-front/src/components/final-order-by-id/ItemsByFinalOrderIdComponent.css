@@ -2,7 +2,7 @@
     /* height: 60px; */
     height: 70px;
     width: 120px;
-    object-fit: cover; /* da ne razvuce sliku */
+    object-fit: cover; 
      border: 1px rgb(173, 135, 135) solid ; 
     border-radius: 5px;
     margin-right: 0px;

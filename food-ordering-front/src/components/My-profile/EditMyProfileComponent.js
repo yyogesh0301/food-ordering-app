@@ -1,9 +1,7 @@
 import React from 'react'
 
 const EditMyProfileComponent = (props) => {
-  const user = props.user // u props se nalazi i user i metoda handle submit
-  // const {user} = props !!!!
-  // className = 'form-control', bootstrapov input forme, da lepse izgleda
+  const user = props.user 
   
   return (
     <div>

@@ -39,7 +39,7 @@ const MyActiveFinalOrdersComponent = () => {
     const getOrderItemsByFinalOrderId = (finalOrderId) =>{
         MealService.getOrderItemsByFinalOrderId(finalOrderId).then((response) =>{
             //alert("RESPONSE ORDER ITEMS " + JSON.stringify(response.data));
-            setOrderItemsByFinalOrderId(response.data); //ZASTO NE RADIIII OVO SRANJEEEE       
+            setOrderItemsByFinalOrderId(response.data);       
             console.log('s');
         }).catch(error =>{
             console.log(error);

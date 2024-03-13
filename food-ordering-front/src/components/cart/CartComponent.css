@@ -1,7 +1,7 @@
 .mealPic{
     height: 110px;
     width: 90%;
-    object-fit: cover; /* da ne razvuce sliku */
+    object-fit: cover; 
     border: 2px rgb(173, 135, 135) solid ; 
     border-radius: 5px;
     margin-right: 0px;
@@ -26,8 +26,7 @@
     margin-top: 20px;
     background-color: whitesmoke; 
     border-radius: 30px !important;
-    border-collapse: separate !important; /*mora ovo separate zbog bootstrapa, ne savije border, jer bootstrap setuje na collapse
-    /* border: 10px solid rgb(241, 0, 0) !important da pregazi bootstrapov border */
+    border-collapse: separate !important; 
     box-shadow: 0 0 15px 15px rgb(133, 127, 127);
 }
 
@@ -240,7 +239,7 @@
     }
 }
 
-/* mozda bi bilo bolje ceo card preko flex-box-a da sam radio width sa flex: 1/2/3;, mada dobro je i ovako */
+
 @media(max-width: 1580px){
     .item-price{
         max-width: 100px;
@@ -258,7 +257,7 @@
 }
 
 @media(max-width: 1180px){
-    /* samo za mobile screen size se pojavljuje */
+   
     .action-icon-mobile{
         display: block;  
     }
@@ -266,7 +265,7 @@
     .action-icon-mobile.update{
         height: 32px;
         fill: #198754;
-        /* margin-bottom: 12px; */
+        
         
     }
     .action-icon-mobile.delete{
@@ -274,7 +273,7 @@
         fill: #dc3545;
        
     }
-    /* sakrivam za desktop */
+    
     .button-icon-container{
         display: none;
     }
